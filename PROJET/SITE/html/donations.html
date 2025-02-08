@@ -1,0 +1,160 @@
+<!DOCTYPE html> <!-- Version 5 de HTML-->
+<html lang="fr"> <!-- Précision de la langue pour le navigateur-->
+    <head> <!-- Entête du document HTML -->
+        <title>ROAR MEANS "HELP" - Accueil</title> <!-- Indique au navigateur quel titre vous donnez à votre page -->
+        <meta charset="UTF-8"> <!-- précise l'encodage des caractère à UTF-8-->
+        <link rel= "stylesheet" href="../css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="../js/script.js"></script>
+    </head><!-- Fin de la balise d'entête -->
+
+<body>
+    <header>
+        <header id="headermain" class="main-header">
+            <nav class="nav-bar">
+                <div class="site-logo">
+                    <!-- Lien vers le haut de la page -->
+                    <a href="accueil.html"><img src="../img/Animal-paw-removebg-preview.png" alt="Logo" class="logo-image"></a>
+                    <a href="accueil.html"><h1 class="site-title">ROAR MEANS "HELP"</h1></a>
+                </div>
+                <ul class="barre-de-navigation">
+                    <li><a href="Especes.html#Especes-en-danger">Espèces en danger</a></li>
+                    <li><a href="Agir_Pour_La_Biodiversite.html">Agir pour la biodiversité</a></li>
+                    <li><a href="Quiz.html#Quiz">Quiz</a></li>
+                </ul>
+                <a href="#Dons" class="bouton-don">DONS</a>
+
+            </nav>
+
+            <div class="fond-animaux">
+                <!-- Ligne supérieure -->
+                <div class="ligne-animaux ligne-haut">
+                    <div class="ligne-contenu">
+                        <img src="../img/img fond/aigle-imperial.jpg" alt="Aigle Impérial">
+                        <img src="../img/img fond/bec-en-sabot-du-nil.jpg" alt="Bec-en-sabot du Nil">
+                        <img src="../img/img fond/cobra-royal.jpg" alt="Cobra Royal">
+                        <img src="../img/img fond/dragon-deau.jpg" alt="Dragon d'eau">
+                        <img src="../img/img fond/gavial-du-gange.jpg" alt="Gavial du Gange">
+                        <img src="../img/img fond/harfang-des-neiges.jpg" alt="Harfang des Neiges">
+                        <img src="../img/img fond/hippocampe.jpg" alt="Hippocampe">
+                        <img src="../img/img fond/kakapo.jpg" alt="Kakapo">
+                    </div>
+                    <div class="ligne-contenu">
+                        <img src="../img/img fond/aigle-imperial.jpg" alt="Aigle Impérial">
+                        <img src="../img/img fond/bec-en-sabot-du-nil.jpg" alt="Bec-en-sabot du Nil">
+                        <img src="../img/img fond/cobra-royal.jpg" alt="Cobra Royal">
+                        <img src="../img/img fond/dragon-deau.jpg" alt="Dragon d'eau">
+                        <img src="../img/img fond/gavial-du-gange.jpg" alt="Gavial du Gange">
+                        <img src="../img/img fond/harfang-des-neiges.jpg" alt="Harfang des Neiges">
+                        <img src="../img/img fond/hippocampe.jpg" alt="Hippocampe">
+                        <img src="../img/img fond/kakapo.jpg" alt="Kakapo">
+                    </div>
+                </div>
+                <!-- Ligne inférieure -->
+                <div class="ligne-animaux ligne-bas">
+                    <div class="ligne-contenu">
+                        <img src="../img/img fond/la-baleine-bleue.jpg" alt="Baleine Bleue">
+                        <img src="../img/img fond/le-panda-roux.jpg" alt="Panda Roux">
+                        <img src="../img/img fond/macareux-moine.jpg" alt="Macareux Moine">
+                        <img src="../img/img fond/tortue-luth.jpg" alt="Tortue luth">
+                        <img src="../img/img fond/orang-outan.jpg" alt="Orang-Outan">
+                        <img src="../img/img fond/ours-polaire.jpg" alt="Ours Polaire">
+                        <img src="../img/img fond/tigre.jpg" alt="Tigre">
+                    </div>
+                    <div class="ligne-contenu">
+                        <img src="../img/img fond/la-baleine-bleue.jpg" alt="Baleine Bleue">
+                        <img src="../img/img fond/le-panda-roux.jpg" alt="Panda Roux">
+                        <img src="../img/img fond/macareux-moine.jpg" alt="Macareux Moine">
+                        <img src="../img/img fond/tortue-luth.jpg" alt="Tortue luth">
+                        <img src="../img/img fond/orang-outan.jpg" alt="Orang-Outan">
+                        <img src="../img/img fond/ours-polaire.jpg" alt="Ours Polaire">
+                        <img src="../img/img fond/tigre.jpg" alt="Tigre">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-content">
+                <a href="#section1"><img src="../img/Bouton-en-savoir-plus.png" alt="En savoir plus"></a>
+            </div>
+        </header>
+    </header>
+
+    <section class="donation-sections" id="Dons">
+        <!-- WWF -->
+        <section id="wwf" class="donation-section" style="display: flex; align-items: center; gap: 20px;">
+            <!-- Visionneur -->
+            <div style="flex: 1;">
+                <video class="video-donations" width="111%" height="500" controls>
+                    <source src="../mp4/WWF.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <!-- Texte et image -->
+            <div style="flex: 1;">
+                <h2>WWF (World Wide Fund for Nature)</h2>
+                <p>Le WWF est une des plus grandes organisations mondiales consacrées à la protection de l'environnement. 
+                Ses actions incluent la préservation des écosystèmes forestiers et montagnards, la lutte contre le braconnage, 
+                et le soutien aux gouvernements pour intégrer la biodiversité dans les stratégies nationales.</p>
+                <img src="../img/wwf.png" alt="WWF" width="300" height="300">
+                <div style="text-align: right;">
+                    <button class="bouton-don-asso" onclick="redirectionWWF()">Faire un don</button> <!--la fonction js permet d'ouvrir dans un autre onglet */--> 
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- IUCN -->
+        <section id="iucn" class="donation-section" style="display: flex; align-items: center; gap: 20px;">
+            <!-- Visionneur vidéo locale -->
+            <div style="flex: 1;">
+                <video class="video-donations" width="100%" height="400" controls>
+                    <source src="../mp4/IUCN.mp4" type="video/mp4">
+                </video>
+            </div>
+        
+            <!-- Texte et image -->
+            <div style="flex: 1;">
+                <h2>IUCN (International Union for Conservation of Nature)</h2>
+                <p>L’UICN est une organisation internationale engagée dans la conservation de la nature et l’utilisation durable 
+                des ressources naturelles. Elle protège les espèces menacées, gère les écosystèmes de manière durable et collabore à l'éradication des espèces exotiques envahissantes.</p>
+                <img src="../img/IUCN.png" alt="IUCN" class="donation-image" >
+                <div style="text-align: right;">
+                    <button class="bouton-don-asso" onclick="redirectionUICN()">Faire un don</button> <!--la fonction js permet d'ouvrir dans un autre onglet */--> 
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Rainforest Alliance -->
+        <section id="rainforest-alliance" class="donation-section" style="display: flex; align-items: center; gap: 20px;">
+            <!-- Visionneur vidéo -->
+            <div style="flex: 1;">
+                <video class="video-donations" width="100%" height="400" controls>
+                    <source src="../mp4/rainforest.mp4" type="video/mp4">
+                </video>
+            </div>
+        
+            <!-- Texte et image -->
+            <div style="flex: 1;">
+                <h2>Rainforest Alliance</h2>
+                <p>Rainforest Alliance travaille à la conservation des forêts et à l'amélioration des conditions de vie des populations locales. 
+                L'organisation promeut une agriculture durable, préserve les sols et sensibilise au rôle des forêts dans la lutte contre les changements climatiques.</p>
+                <img src="../img/rainforest.png" alt="Rainforest Alliance" class="donation-image" style="max-width: 100%;">
+                <div style="text-align: right;">
+                    <button class="bouton-don-asso" onclick="redirectionRA()">Faire un don</button> <!--la fonction js permet d'ouvrir dans un autre onglet */--> 
+                </div>            
+            </div>
+        </section>
+        
+        <script src="../js/redirection_donations.js"></script>
+        
+
+    </section>
+        <footer>
+            <p>©️2024 ROAR MEANS "HELP".</p>
+            <p>Tous droits réservés.</p>
+            <a href="apropos.html#Equipe">En savoir plus ?</a>
+        </footer>
+
+</body>
+</html>

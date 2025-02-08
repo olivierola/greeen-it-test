@@ -1,0 +1,757 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
+}
+
+.main-header {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* FOND DU HEADER */
+.fond-animaux {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.ligne-animaux {
+    display: flex;
+    position: absolute;
+    width: 200%;
+    height: 50%;
+}
+
+.ligne-haut {
+    top: 0; /* Ligne supérieure */
+    animation: defilement-gauche-droite 22s linear infinite;
+}
+
+.ligne-bas {
+    bottom: 0; /* Ligne inférieure */
+    animation: defilement-droite-gauche 20s linear infinite;
+}
+
+.ligne-contenu {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.ligne-contenu img {
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Animation pour la ligne du haut (gauche -> droite) */
+@keyframes defilement-gauche-droite {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-80.5%);
+    }
+}
+
+/* Animation pour la ligne du bas (droite -> gauche) */
+@keyframes defilement-droite-gauche {
+    from {
+        transform: translateX(-70.5%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* FIN FOND DU HEADER */
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-bar.shrink {
+    padding: 0px 100px;
+    background: rgba(0, 0, 0, 0.9);
+    transition: all 0.3s ease;
+}
+
+.site-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.site-title {
+    font-size: 100px;
+    font-weight: bold;
+    color:#26751c;
+    font-size: 28px;
+    transition: color 0.3s;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.barre-de-navigation {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+}
+
+.barre-de-navigation li a {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    transition: color 0.3s;
+}
+
+.barre-de-navigation li a:hover, .site-title:hover {
+    color: #f4a261;
+}
+
+.bouton-don {
+    background-color: #51fc3a;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.bouton-don:hover {
+    background-color: #26751c;
+}
+
+.header-content {
+    padding: 1%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 1000px;
+    z-index: 2;
+}
+
+.header-content img {
+    transition: opacity 0.3s ease;
+}
+
+.header-content img:hover{
+    opacity: 0.8;
+}
+
+.AIDE_vert {
+    color: #51fc3a;
+}
+
+.accueil-section1 {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contenu-accueil-section1 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.texte-principal {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.accueil-section1 .description {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+#section1 {
+    scroll-margin-top: 150px;
+}
+
+footer {
+    text-align: center;
+    font-size: 20px;
+    background-color: #000;
+    color:#fff;
+    padding: 20px;
+}
+
+
+/* --------------------------------- Espèces en danger --------------------------------- */
+
+.section-especes {
+    background-color: #ffffff; 
+    padding: 40px 20px; 
+    text-align: center;
+}
+
+.conteneur-especes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.element-espece {
+    text-align: center;
+}
+
+.image-espece {
+    width: 100%;
+    height: 200px; /* Hauteur fixe pour uniformiser les images */
+    object-fit: cover; /* Coupe les parties débordantes */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+.image-espece:hover{
+    opacity: 0.8;
+}
+
+.nom-espece {
+    margin-top: 10px; /* Espacement avec l'image */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+/* ESPECES */
+#Especes-en-danger{
+    scroll-margin-top: 150px;
+}
+
+.Section-info-especes {
+    background-color: #fff;
+}
+
+.card {
+    display: flex;
+    border: 3px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    margin: 2px auto;
+    margin-bottom: 50px;
+    scroll-margin-top: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Pour les écrans réduits */
+@media (max-width: 1024px) {
+    .image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.title {
+    color: #26751c;
+    font-size: 100px;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+.caracteristique {
+    font-size: 1rem;
+    color: #252525;
+    line-height: 1.6;
+}
+
+.titre-partie {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.label {
+    font-weight: bold;
+}
+
+
+.tester-connaissances {
+    background-color: #ffffff; 
+    padding: 40px 20px; 
+    text-align: center;
+}
+
+.tester-connaissances-titre {
+    color: #26751c;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.tester-connaissances-description {
+    color: #666;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.tester-connaissances .site-title {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(59, 141, 49, 0.7);
+    border-radius: 50px;
+    font-size: 30px;
+    color: #ffffff; 
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tester-connaissances .site-title:hover {
+    color: #f4a261; 
+    background: rgba(27, 65, 22, 0.7);
+}
+
+/* QUIZ */
+.fond-quiz {
+    background-color: #fff;
+    color: #000;
+}
+
+form {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 3px solid #6fdd43;
+    border-radius: 10px;
+}
+
+fieldset {
+    border: 2px solid #6fdd43;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 20px;
+    color: #4caf50;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="date"], input[type="email"], select {
+    width: 70%; 
+    padding: 8px;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.quiz {
+    display: none;
+}
+
+input[type="button"] {
+    width: auto;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+input[type="button"]:hover {
+    background-color: #45a049;
+}
+
+#exemple_GreenIT {
+    width: 100%;
+    padding: 50px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto; 
+    border-collapse: collapse;
+    background-color: #f8fdf4;
+    border: 2px solid #4caf50;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 30px;
+    color: #4caf50;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+thead th {
+    background-color: #4caf50;
+    color: white;
+    font-size: 25px;
+    padding: 15px;
+    border: 2px solid #1d4b1f;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #eaf7e2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fdf4;
+}
+
+td, th {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #f0e5e5;
+    vertical-align: top;
+}
+
+th[scope="row"] {
+    background-color: #d7f0cd;
+    font-weight: bold;
+    color: #1d4b1f;
+    border: 1px solid black;
+}
+
+tbody tr:hover {
+    background-color: #c8e6c9;
+}
+
+.image-quiz {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------------------------- Agir pour la Biodiversité --------------------------------- */
+
+.section-biodiversite {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 30px;
+    color: #26751c;
+    margin-bottom: 20px;
+}
+
+.causes-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cause {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 600px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.cause:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.cause-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.separator {
+    height: 2px;
+    background-color: #333;
+    margin: 30px auto;
+    width: 80%;
+}
+
+.section-biodiversite .description {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.cause h3 {
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+
+/* Paragraphe masqué */
+.cause p:not(:first-child) {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Afficher le paragraphe au survol */
+.cause:hover p:not(:first-child) {
+    display: block;
+    opacity: 1;
+}
+
+#Agir {
+    scroll-margin-top: 150px;
+}
+
+/* --------------------------------- DONS --------------------------------- */
+
+/* PAGE DES ASSOCIATIONS */
+.donation-sections {  /* dans le main*/
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.donation-section { /* dans les sections */
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.donation-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.donation-section h2 {
+    color: #26751c;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.donation-section p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.donation-image {
+    width: 400px;
+    height: 400px;
+}
+
+#Dons {
+    scroll-margin-top: 150px;
+}
+
+.bouton-don-asso {  /* bouton de dons animé */
+    font-size: 25px ;
+    background-color: hsl(139, 97%, 24%);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 180px;
+    height: 80px;
+    transition: 0.3s;
+}
+
+.bouton-don-asso:hover {
+    background-color: #3bff4f;
+    box-shadow: 0 0 0 5px #67ff6791;
+    color: #fff;
+}
+
+/* VIDEOS */
+video {
+    width: 700px ;
+    height: 394px;
+}
+
+.video-donations{
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-donations:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* --------------------------------- A propos --------------------------------- */
+
+/* Section équipe */
+.section-equipe {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.conteneur-equipe {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.membre-equipe {
+    text-align: center;
+    max-width: 300px;
+}
+
+.photo-equipe {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    aspect-ratio: 5 / 3;
+    transition: transform 0.3s ease;
+}
+
+.nom-equipe {
+    font-size: 18px;
+    font-weight: bold;
+    color: #26751c;
+}
+
+/* Section description */
+.description-projet {
+    text-align: center;
+    padding: 20px;
+}
+
+.texte-description {
+    font-size: 20px;
+    color: #555;
+}
+
+#Jérémy:hover {
+    transform: scale(3.5) translate(50%);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#Marco:hover {
+    transform: scale(3.5);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#Sean:hover {
+    transform: scale(3.5) translate(-50%);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
